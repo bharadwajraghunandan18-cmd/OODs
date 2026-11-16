@@ -1,0 +1,294 @@
+
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fffaf5;
+    color: #333;
+}
+
+/* NAVIGATION */
+header {
+    background: #e94e1b;
+    color: white;
+    padding: 18px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffe0b2;
+}
+
+.cart-icon {
+    font-size: 20px;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 420px;
+    background:
+        linear-gradient(rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)),
+        url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600")
+        center/cover;
+
+    display: flex;
+    align-items: center;
+    padding: 50px 8%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    background: #e94e1b;
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #c83b12;
+}
+
+/* SECTIONS */
+.section {
+    padding: 65px 7%;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+    color: #d94316;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* FOOD CARDS */
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.food-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-7px);
+}
+
+.food-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.food-card h3 {
+    margin: 15px 0 8px;
+}
+
+.food-card p {
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.food-card .price {
+    color: #e94e1b;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.food-card button {
+    margin-bottom: 18px;
+}
+
+/* CART */
+.cart-section {
+    background: #fff0e6;
+}
+
+.cart-item {
+    background: white;
+    padding: 15px;
+    margin: 12px auto;
+    max-width: 650px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    gap: 12px;
+}
+
+.remove-btn {
+    background: #dc3545;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.total {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 25px 0;
+}
+
+/* CHECKOUT AND ADMIN FORMS */
+.checkout form,
+.admin-section form {
+    max-width: 500px;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    text-align: left;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+label {
+    font-weight: bold;
+}
+
+.checkout {
+    background: white;
+}
+
+/* ORDER TRACKING */
+.order-card {
+    background: white;
+    max-width: 650px;
+    margin: 15px auto;
+    padding: 22px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+.order-card h3 {
+    color: #e94e1b;
+    margin-bottom: 12px;
+}
+
+.order-card p {
+    margin: 8px 0;
+}
+
+.order-card select {
+    margin-top: 10px;
+}
+
+/* ADMIN */
+.admin-section {
+    background: #fff0e6;
+}
+
+/* FOOTER */
+footer {
+    background: #292929;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+footer h3 {
+    color: #ff7545;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 7px 0;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 700px) {
+    header {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .cart-item {
+        flex-wrap: wrap;
+    }
+}
